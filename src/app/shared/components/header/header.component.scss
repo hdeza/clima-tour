@@ -1,0 +1,15 @@
+.header {
+  @apply flex justify-between items-center bg-gray-500/20 p-4 absolute z-10 w-full top-0 left-0;
+
+  &__title {
+    @apply font-playfar text-white text-xl font-extrabold;
+
+    &--highlight {
+      @apply text-primary_orange;
+    }
+  }
+
+  &__menu {
+    @apply text-white;
+  }
+}

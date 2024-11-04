@@ -1,0 +1,31 @@
+.main {
+  @apply relative w-full min-h-screen;
+
+  &__img {
+    @apply absolute w-full h-full object-cover saturate-150 brightness-50;
+  }
+
+  &__content {
+    @apply absolute inset-0 text-white text-center flex flex-col justify-center items-center px-4 space-y-2;
+
+    &-title {
+      @apply font-playfar font-bold text-3xl;
+    }
+
+    &-description {
+      @apply font-roboto font-light;
+    }
+
+    &-button {
+      @apply px-2 py-2 rounded-full text-white bg-gray-400/45 flex items-center justify-center space-x-2;
+
+      &-circle {
+        @apply bg-white rounded-full flex items-center justify-center p-1;
+
+        &-icon {
+          @apply text-primary_orange;
+        }
+      }
+    }
+  }
+}
