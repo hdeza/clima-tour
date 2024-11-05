@@ -1,5 +1,9 @@
 .header {
-  @apply fixed flex justify-between items-center bg-gray-500/20 p-4 z-10 w-full top-0 left-0;
+  @apply transition-colors fixed flex justify-between items-center bg-gray-500/20 p-4 z-10 w-full top-0 left-0;
+
+  &.scrolled {
+    @apply bg-gray-900;
+  }
 
   &__title {
     @apply font-playfar text-white text-xl font-extrabold;
