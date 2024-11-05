@@ -1,0 +1,43 @@
+.infoWeather {
+  @apply py-4 space-y-5 bg-primary_white;
+
+  &__divider {
+    @apply flex space-x-2 items-center;
+
+    &-line {
+      @apply border w-16 border-gray-500;
+    }
+
+    &-text {
+      @apply font-roboto font-light text-sm;
+    }
+  }
+
+  &__content {
+    @apply flex flex-col space-y-8 px-5 text-center;
+
+    &-title {
+      @apply font-playfar font-bold text-3xl;
+    }
+
+    &--highlight {
+      @apply text-primary_orange;
+    }
+
+    &-description {
+      @apply font-roboto text-sm px-8;
+    }
+
+    &-info {
+      @apply font-roboto flex flex-col items-center px-10;
+
+      &-title {
+        @apply font-bold text-2xl mb-1;
+      }
+
+      &-description {
+        @apply font-light px-6 text-sm;
+      }
+    }
+  }
+}

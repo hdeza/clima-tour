@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { MainComponent } from '../../shared/components/main/main.component';
+import { FeaturedWeatherComponent } from '../../shared/components/featured-weather/featured-weather.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MainComponent],
+  imports: [MainComponent, FeaturedWeatherComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
