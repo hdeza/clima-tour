@@ -1,10 +1,10 @@
-import { NgOptimizedImage } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [NgOptimizedImage, MatIconModule],
+  imports: [NgOptimizedImage, CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })
