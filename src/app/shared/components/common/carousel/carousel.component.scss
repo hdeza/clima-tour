@@ -1,5 +1,5 @@
 .card {
-  @apply space-y-2;
+  @apply space-y-2 px-10;
 
   &__img {
     @apply rounded-lg w-full h-52 object-cover shadow-xl;
