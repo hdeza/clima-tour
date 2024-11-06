@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { MainPredictionComponent } from '../../shared/components/main-prediction/main-prediction.component';
 
 @Component({
   selector: 'app-prediction',
   standalone: true,
-  imports: [],
+  imports: [MainPredictionComponent],
   templateUrl: './prediction.component.html',
   styleUrl: './prediction.component.scss',
 })

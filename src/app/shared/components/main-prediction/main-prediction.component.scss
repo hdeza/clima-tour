@@ -1,0 +1,35 @@
+.main {
+  @apply relative w-full min-h-screen;
+
+  &__img {
+    @apply absolute w-full h-full object-cover saturate-150 brightness-50;
+  }
+
+  &__content {
+    @apply absolute inset-0 text-white text-center flex flex-col justify-center items-center px-4 space-y-6;
+
+    &-title {
+      @apply font-playfar font-black text-4xl;
+    }
+
+    &-description {
+      @apply font-roboto font-light;
+    }
+
+    &-select {
+      @apply font-roboto bg-transparent border-b-2 text-center text-white hover:border-b-primary_orange hover:transition-colors;
+
+      &-option {
+        @apply bg-gray-800 text-sm;
+      }
+    }
+
+    &-button {
+      @apply p-2 rounded-full font-bold text-white bg-primary_orange flex items-center justify-center space-x-2 shadow-xl;
+
+      &-circle {
+        @apply bg-white rounded-full p-1 flex justify-center items-center;
+      }
+    }
+  }
+}
