@@ -17,13 +17,13 @@
     }
 
     &-button {
-      @apply px-2 py-2 rounded-full text-white bg-gray-400/45 flex items-center justify-center space-x-2;
+      @apply p-2 rounded-full text-white bg-gray-400/45 flex items-center justify-center space-x-2;
 
       &-circle {
-        @apply bg-white rounded-full flex items-center justify-center p-1;
+        @apply bg-white rounded-full p-1 flex justify-center items-center;
 
-        &-icon {
-          @apply text-primary_orange;
+        &-svg {
+          @apply w-7 h-7;
         }
       }
     }

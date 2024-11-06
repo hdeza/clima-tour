@@ -1,0 +1,40 @@
+.infoDestination {
+  @apply py-4 px-10 space-y-8 bg-secundary_white;
+
+  &__divider {
+    @apply flex space-x-2 items-center;
+
+    &-line {
+      @apply border w-16 border-gray-500;
+    }
+
+    &-text {
+      @apply font-roboto font-light text-sm;
+    }
+  }
+
+  &__title {
+    @apply font-playfar font-bold text-2xl  text-center;
+
+    &--highlight {
+      @apply text-primary_orange;
+    }
+  }
+
+  &__cities {
+    @apply space-y-4;
+
+    &-city {
+      @apply font-roboto flex justify-between items-center;
+
+      &-text {
+        width: 75%;
+      }
+
+      &-span {
+        width: 25%;
+        @apply border border-black rounded-full py-1 text-center bg-white;
+      }
+    }
+  }
+}

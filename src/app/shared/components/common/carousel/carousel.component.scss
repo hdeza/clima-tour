@@ -1,0 +1,11 @@
+.card {
+  @apply space-y-2;
+
+  &__img {
+    @apply rounded-lg w-full h-52 object-cover shadow-xl;
+  }
+
+  &__selectors {
+    @apply flex justify-center space-x-1;
+  }
+}
