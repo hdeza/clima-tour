@@ -1,0 +1,19 @@
+.weather {
+  @apply bg-gradient-to-r from-cyan-300 to-blue-500 m-4 rounded-2xl p-4 font-roboto space-y-4;
+
+  &__title {
+    @apply text-3xl;
+  }
+
+  &__info {
+    @apply flex justify-between text-xl;
+
+    &-temperature {
+      @apply flex items-center space-x-1;
+    }
+
+    &-days {
+      @apply flex items-center space-x-1;
+    }
+  }
+}
