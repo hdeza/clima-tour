@@ -1,0 +1,30 @@
+<div class="card" [class.card--expanded]="isExpanded">
+  <div
+    class="card__header"
+    (click)="toggleExpand()"
+    [class]="{ 'card__header--active': isExpanded }"
+  >
+    <h2 class="card__title">
+      <span class="card__title--highlight">Day {{ numberOfDay }}:</span>
+      {{ title }}
+    </h2>
+    <svg
+      class="card__icon"
+      [class.card__icon--rotated]="isExpanded"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      <path d="M7 10l5 5 5-5z" />
+    </svg>
+  </div>
+
+  <div
+    class="card__content"
+    [@expandCollapse]="isExpanded ? 'expanded' : 'collapsed'"
+  >
+    <p class="card__content-title">Activities</p>
+    <p>soy yo</p>
+  </div>
+</div>

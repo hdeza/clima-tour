@@ -1,0 +1,36 @@
+// expandable-card.component.scss
+.card {
+  @apply bg-white rounded-xl shadow-md;
+
+  &__header {
+    @apply flex justify-between px-4 pt-4 items-center cursor-pointer hover:bg-gray-50;
+
+    &--active {
+      @apply bg-gray-50;
+    }
+  }
+
+  &__title {
+    @apply text-lg font-medium text-gray-800;
+
+    &--highlight {
+      @apply text-primary_orange;
+    }
+  }
+
+  &__icon {
+    @apply w-6 h-6 text-gray-500 transition-transform duration-200;
+
+    &--rotated {
+      @apply transform rotate-180;
+    }
+  }
+
+  &__content {
+    @apply p-4 text-gray-600;
+
+    &-title {
+      @apply font-bold text-xl;
+    }
+  }
+}

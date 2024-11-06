@@ -1,5 +1,5 @@
 .weather {
-  @apply bg-gradient-to-r from-cyan-300 to-blue-500 m-4 rounded-2xl p-4 font-roboto space-y-4;
+  @apply bg-gradient-to-r from-cyan-300 to-blue-500 m-4 rounded-2xl p-4 font-roboto space-y-4 shadow-md;
 
   &__title {
     @apply text-3xl;
