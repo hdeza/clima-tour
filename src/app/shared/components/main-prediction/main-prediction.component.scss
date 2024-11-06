@@ -25,7 +25,7 @@
     }
 
     &-button {
-      @apply p-2 rounded-full font-bold text-white bg-primary_orange flex items-center justify-center space-x-2 shadow-xl;
+      @apply p-2 rounded-full font-bold text-white bg-gray-400/45 hover:bg-primary_orange hover:transition-colors flex items-center justify-center space-x-2 shadow-xl;
 
       &-circle {
         @apply bg-white rounded-full p-1 flex justify-center items-center;
