@@ -1,0 +1,43 @@
+.footer {
+  @apply bg-gray-900 text-white py-4;
+  &__content {
+    @apply flex justify-between px-4 pb-4 space-x-10;
+
+    &-info {
+      &-title {
+        @apply font-playfar text-xl font-extrabold;
+
+        &--highlight {
+          @apply text-primary_orange;
+        }
+      }
+
+      &-description {
+        @apply font-light text-sm;
+      }
+    }
+
+    &-links {
+      @apply font-light text-sm space-y-1;
+
+      &-title {
+      }
+
+      &-list {
+        @apply list-disc;
+      }
+    }
+  }
+
+  &__copyright {
+    @apply text-center font-light text-xs;
+
+    &-divider {
+      @apply border-t-2 border-primary_orange;
+    }
+
+    &-text {
+      @apply pt-2;
+    }
+  }
+}
