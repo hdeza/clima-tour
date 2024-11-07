@@ -7,14 +7,16 @@
         to Get Personalized Weather Predictions and Activity Recommendations
       </p>
     </div>
-    <select class="main__content-select">
-      <option class="main__content-select-option" value="0">
+    <select (change)="onChange($event)" class="main__content-select">
+      <option class="main__content-select-option" value="">
         Select Your Destination City
       </option>
-      <option class="main__content-select-option" value="1">
+      <option class="main__content-select-option" value="Cartagena de Indias">
         Cartagena de Indias
       </option>
-      <option class="main__content-select-option" value="2">Santa Marta</option>
+      <option class="main__content-select-option" value="Santa Marta">
+        Santa Marta
+      </option>
     </select>
     <button (click)="getItinerary()" class="main__content-button">
       <span>Create My Trip!</span>

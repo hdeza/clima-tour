@@ -16,14 +16,22 @@ export interface ItineraryInfo {
 })
 export class MainPredictionComponent {
   backGroundUrl: string = 'images/travel.jpg';
+  city: string = '';
   data: any;
+
   dataInfo: ItineraryInfo = {
-    city: 'Santa Marta',
+    city: 'Bogotá',
     temperature: 32,
     days: 2,
   };
 
   constructor(private itineraryService: ItineraryService) {}
+
+  onChange(event: Event) {
+    const city = (event.target as HTMLSelectElement).value;
+    this.city = city;
+    this.dataInfo.city = this.city;
+  }
 
   getItinerary() {
     this.itineraryService.postData(this.dataInfo).subscribe((data) => {
