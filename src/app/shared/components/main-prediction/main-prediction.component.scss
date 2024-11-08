@@ -17,7 +17,7 @@
     }
 
     &-select {
-      @apply font-roboto bg-transparent border-b-2 text-center text-white hover:border-b-primary_orange hover:transition-colors;
+      @apply font-roboto bg-transparent border-b-2 text-center text-white hover:border-b-primary_orange hover:transition-colors w-56 border-b-white;
 
       &-option {
         @apply bg-gray-800 text-sm;

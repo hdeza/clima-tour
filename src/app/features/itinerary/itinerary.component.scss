@@ -1,3 +1,7 @@
 .itinerary {
-  @apply m-4;
+  @apply font-roboto max-w-4xl mx-auto p-6;
+
+  &__content {
+    @apply text-lg leading-relaxed text-gray-800;
+  }
 }
