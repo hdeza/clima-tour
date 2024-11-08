@@ -72,12 +72,14 @@ export class MainPredictionComponent {
 
   // Función que esta pendiente de cualquier cambio en el select y guarda el valor
   onChangeCity(event: Event) {
+    this.showData = false;
     const city = (event.target as HTMLSelectElement).value;
     this.city = city;
     this.dataInfo.city = this.city;
   }
 
   onChangeDays(event: Event) {
+    this.showData = false;
     const days = (event.target as HTMLSelectElement).value;
     this.dataInfo.days = parseInt(days);
   }
