@@ -1,12 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-
-export interface ItineraryInfo {
-  city: string;
-  temperature: number;
-  days: number;
-}
+import { ItineraryInfo } from '../models/itinerary.model';
 
 @Injectable({
   providedIn: 'root',
