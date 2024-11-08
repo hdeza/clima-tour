@@ -7,7 +7,7 @@
         to Get Personalized Weather Predictions and Activity Recommendations
       </p>
     </div>
-    <select (change)="onChange($event)" class="main__content-select">
+    <select (change)="onChangeCity($event)" class="main__content-select">
       <option class="main__content-select-option" value="">
         Select Your Destination City
       </option>
@@ -18,6 +18,16 @@
         Santa Marta
       </option>
     </select>
+
+    <select (change)="onChangeDays($event)" class="main__content-select">
+      <option class="main__content-select-option" value="">
+        Enter the number of days
+      </option>
+      <option class="main__content-select-option" value="1">1 día</option>
+      <option class="main__content-select-option" value="2">2 dias</option>
+      <option class="main__content-select-option" value="3">3 dias</option>
+      <option class="main__content-select-option" value="4">4 dias</option>
+    </select>
     <button (click)="createTrip()" class="main__content-button">
       <span>Create My Trip!</span>
       <div class="main__content-button-circle">
@@ -26,3 +36,9 @@
     </button>
   </article>
 </main>
+@if (showData) {
+<div #dataSection>
+  <app-weather [dataInfo]="dataInfo" />
+  <app-itinerary [dataItinerary]="dataItinerary" />
+</div>
+}
