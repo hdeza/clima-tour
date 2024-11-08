@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ItineraryInfo } from '../../core/models/itinerary.model';
 
 @Component({
   selector: 'app-weather',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
   templateUrl: './weather.component.html',
   styleUrl: './weather.component.scss',
 })
-export class WeatherComponent {}
+export class WeatherComponent {
+  @Input() dataInfo: ItineraryInfo = {
+    city: '',
+    temperature: 32,
+    days: 2,
+  };
+}
