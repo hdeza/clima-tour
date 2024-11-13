@@ -9,21 +9,21 @@
     @apply absolute inset-0 text-white text-center flex flex-col justify-center items-center px-4 space-y-2;
 
     &-title {
-      @apply font-playfar font-bold text-3xl;
+      @apply font-playfar font-bold text-3xl md:text-5xl;
     }
 
     &-description {
-      @apply font-roboto font-light;
+      @apply font-roboto font-light md:text-lg;
     }
 
     &-button {
-      @apply p-2 rounded-full text-white bg-gray-400/45 flex items-center justify-center space-x-2;
+      @apply p-2 rounded-full text-white bg-gray-400/45 flex items-center justify-center space-x-2 md:text-2xl md:p-3;
 
       &-circle {
         @apply bg-white rounded-full p-1 flex justify-center items-center;
 
         &-svg {
-          @apply w-7 h-7;
+          @apply w-7 h-7 md:w-10 md:h-10;
         }
       }
     }

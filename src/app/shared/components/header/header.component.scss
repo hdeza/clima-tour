@@ -1,19 +1,25 @@
 .header {
-  @apply transition-colors fixed flex justify-between items-center bg-gray-500/20 p-4 z-10 w-full top-0 left-0;
+  @apply transition-colors fixed flex  justify-between items-center bg-gray-500/20 p-4 z-10 w-full top-0 left-0;
 
   &.scrolled {
     @apply bg-gray-900;
   }
 
   &__title {
-    @apply font-playfar text-white text-xl font-extrabold;
+    @apply font-playfar text-white text-2xl font-extrabold md:text-3xl;
 
     &--highlight {
       @apply text-primary_orange;
     }
   }
+}
 
-  &__menu {
-    @apply text-white;
+.nav {
+  &__list {
+    @apply text-white flex gap-4 md:text-lg;
+
+    &-item {
+      @apply hover:text-primary_orange hover:transition-colors;
+    }
   }
 }

@@ -1,4 +1,7 @@
 <main class="main">
+  @if (loading) {
+  <div class="main__loader"><div class="main__loader-item"></div></div>
+  }
   <img [src]="backGroundUrl" alt="menu logo" class="main__img" />
   <article class="main__content">
     <div>

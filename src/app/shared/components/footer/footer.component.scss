@@ -1,11 +1,11 @@
 .footer {
   @apply bg-gray-900 text-white py-4;
   &__content {
-    @apply flex justify-between px-4 pb-4 space-x-10;
+    @apply flex justify-between px-4 pb-4 space-x-10 lg:px-8;
 
     &-info {
       &-title {
-        @apply font-playfar text-xl font-extrabold;
+        @apply font-playfar text-xl font-extrabold lg:text-2xl;
 
         &--highlight {
           @apply text-primary_orange;
@@ -13,12 +13,12 @@
       }
 
       &-description {
-        @apply font-light text-sm;
+        @apply font-light text-sm lg:text-base;
       }
     }
 
     &-links {
-      @apply font-light text-sm space-y-1;
+      @apply font-light text-sm space-y-1 lg:text-base;
 
       &-title {
       }

@@ -21,6 +21,7 @@ export class MainPredictionComponent {
   dataItinerary: any;
   weatherData: any;
   showData: boolean = false;
+  loading: boolean = false;
 
   @ViewChild('dataSection') dataSection!: ElementRef; // Referencia al contenedor de datos
 
@@ -101,15 +102,16 @@ export class MainPredictionComponent {
     console.log('Datos de meteostat');
     console.log(response.data[0]);
     this.weatherData = response.data[0];
+    this.paramsWeather.tavg = this.weatherData.tavg ?? 0;
+    this.paramsWeather.tmin = this.weatherData.tmin ?? 0;
+    this.paramsWeather.tmax = this.weatherData.tmax ?? 0;
+    this.paramsWeather.prcp = this.weatherData.prcp ?? 0;
+    this.paramsWeather.wdir = this.weatherData.wdir ?? 0;
+    this.paramsWeather.wspd = this.weatherData.wspd ?? 0;
+    this.paramsWeather.pres = this.weatherData.pres ?? 0;
     this.paramsWeather.latitude = coordenada.lat;
     this.paramsWeather.longitude = coordenada.lng;
-    this.paramsWeather.prcp = this.weatherData.prcp;
-    this.paramsWeather.pres = this.weatherData.pres;
-    this.paramsWeather.tavg = this.weatherData.tavg;
-    this.paramsWeather.tmax = this.weatherData.tmax;
-    this.paramsWeather.tmin = this.weatherData.tmin;
-    this.paramsWeather.wdir = this.weatherData.wdir;
-    this.paramsWeather.wspd = this.weatherData.wspd;
+
     console.log('Datos formateado:');
     console.log(this.paramsWeather);
   }
@@ -133,6 +135,7 @@ export class MainPredictionComponent {
     this.dataItinerary = dataI;
     console.log('Datos del itinerario');
     console.log(this.dataItinerary);
+    this.loading = false;
     this.showData = true;
 
     // Desplazamiento suave hacia el componente
@@ -145,6 +148,8 @@ export class MainPredictionComponent {
   }
 
   async createTrip(): Promise<void> {
+    this.loading = true;
+    this.showData = false;
     console.log(this.city);
     switch (this.city) {
       case 'Cartagena de Indias':
@@ -155,6 +160,7 @@ export class MainPredictionComponent {
         break;
       default:
         console.log('Ciudad no encontrada');
+        this.loading = false;
         break;
     }
     console.log('city selected:', this.coordinateCitySelected);
