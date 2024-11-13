@@ -92,11 +92,11 @@ To run the project locally, follow these steps:
    ```bash
    git clone https://github.com/hdeza/clima-tour.git
    cd ClimaTour
-  ```
+   ```
 2. Install dependencies:
  ```bash
    npm install
-  ```
+ ```
 3. Start the development server
   ```bash
    ng serve
